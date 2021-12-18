@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Giphys from '../views/Giphys.vue'
+import MyFavourite from '@/views/MyFavourite'
 
 const routes = [
   {
@@ -18,6 +19,11 @@ const routes = [
     path: '/giphys',
     name: 'Giphys',
     component: Giphys
+  },
+  {
+    path: '/myfavourite',
+    name: 'MyFav',
+    component: MyFavourite
   }
 
 ]
