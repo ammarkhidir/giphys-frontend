@@ -1,4 +1,4 @@
-# giphys-frontend
+# Giphys-frontend
 
 ## Project setup
 ```
@@ -9,7 +9,10 @@ npm install
 ```
 npm run serve
 ```
-
+or
+```
+vue-cli-service serve
+```
 ### Compiles and minifies for production
 ```
 npm run build
