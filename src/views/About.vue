@@ -8,7 +8,6 @@
 body {
   margin: 0;
   padding: 0;
-  background-color:rgb(250, 28, 65)
 }
 p{
   text-align: left;
