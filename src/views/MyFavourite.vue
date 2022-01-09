@@ -5,6 +5,8 @@
         <div class="col" v-for="giphy in giphysFavourites" :key="giphy.id">
           <img :src="giphy.link" class="card-img-top" >
           <div class="card-body">
+            <label>{{giphy.title}}</label>
+            <button type="button" class="btn btn-primary btn-sm" v-on:click="removeFavourite(giphy.id)">Remove</button>
           </div>
         </div>
       </div>
@@ -20,7 +22,7 @@ export default {
     }
   },
   mounted () {
-    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + 'api/v1/giphys'
+    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/giphys'
     const requestOptions = {
       method: 'GET',
       redirect: 'follow'
@@ -31,6 +33,23 @@ export default {
         this.giphysFavourites.push(gif)
       }))
       .catch(error => console.log('error', error))
+  },
+  methods: {
+    reloadPage () {
+      window.location.reload()
+    },
+    removeFavourite: async function (id) {
+      const requestOptions = {
+        method: 'DELETE',
+        redirect: 'follow'
+      }
+      const url = 'http://localhost:8080/api/v1/giphys/' + id
+      fetch(url, requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error))
+      this.reloadPage()
+    }
   }
 }
 </script>

@@ -9,7 +9,7 @@
         <div class="navbar-nav">
           <router-link class="nav-link" to="/">Home</router-link>
           <router-link class="nav-link" to ="/about">About</router-link>
-          <router-link class="nav-link" to ="/Giphys">Giphys</router-link>
+          <router-link class="nav-link" to ="/random">Random</router-link>
           <router-link class="nav-link" to ="/myfavourite">My Favourite</router-link>
         </div>
        <!-- <ul class="navbar-nav">

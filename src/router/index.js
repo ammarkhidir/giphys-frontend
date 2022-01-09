@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
-import Giphys from '../views/Giphys.vue'
+import Random from '../views/Random.vue'
 import MyFavourite from '@/views/MyFavourite'
 
 const routes = [
@@ -16,9 +16,9 @@ const routes = [
     component: About
   },
   {
-    path: '/giphys',
-    name: 'Giphys',
-    component: Giphys
+    path: '/random',
+    name: 'Random',
+    component: Random
   },
   {
     path: '/myfavourite',
