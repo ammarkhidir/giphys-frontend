@@ -61,7 +61,7 @@ export default {
         body: JSON.stringify({ title: title, link: link }),
         redirect: 'follow'
       }
-      fetch('https://ammarkhidir-webtechnologies.herokuapp.com/api/v1/giphys/api/v1/giphys', requestOptions)
+      fetch('https://ammarkhidir-webtechnologies.herokuapp.com/api/v1/giphys', requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error))
