@@ -49,7 +49,7 @@ export default {
         body: JSON.stringify({ title: title, link: link }),
         redirect: 'follow'
       }
-      fetch('https://ammarkhidir-webtechnologies.herokuapp.com/api/v1/giphys', requestOptions)
+      fetch(process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/giphys', requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error))

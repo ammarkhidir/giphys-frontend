@@ -43,7 +43,7 @@ export default {
         method: 'DELETE',
         redirect: 'follow'
       }
-      const url = 'https://ammarkhidir-webtechnologies.herokuapp.com/api/v1/giphys/' + id
+      const url = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/giphys/' + id
       fetch(url, requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
